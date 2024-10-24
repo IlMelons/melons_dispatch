@@ -1,0 +1,8 @@
+{
+    "alerts_toggle_title": "Alerts",
+    "alerts_mute_title": "Silent Alerts",
+    "alerts_toggle_message": "Alerts are now: ",
+    "alerts_mute_message": "Silent alerts are now: ",
+    "enabled": "Enabled",
+    "disabled": "Disabled"
+}
