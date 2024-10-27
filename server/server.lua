@@ -46,3 +46,10 @@ end)
 lib.addCommand("opendispatch", { help = "Opens Dispatch Menu", restricted = false}, function(source, args, raw)
     TriggerClientEvent("melons_dispatch:client:OpenDispatchMenu", source)
 end)
+
+---@description UNCOMMENT FOR TESTING
+-- lib.addCommand("testalerts", { help = "Test Alerts", restricted = false}, function(source, args, raw)
+--     DispatchAlert({ coords = vector3(0.0, 0.0, 0.0), jobs = "police"}, "storerobbery")
+--     DispatchAlert({ coords = vector3(0.0, 50.0, 0.0), jobs = "police"}, "fleecarobbery")
+--     DispatchAlert({ coords = vector3(0.0, -50.0, 0.0), jobs = "police"}, "pacificrobbery")
+-- end)

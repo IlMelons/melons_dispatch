@@ -1,0 +1,8 @@
+{
+    "alerts_toggle_title": "Avvisi",
+    "alerts_mute_title": "Avvisi Silenziati",
+    "alerts_toggle_message": "Stato avvisi: ",
+    "alerts_mute_message": "Stato avvisi silenziosi: ",
+    "enabled": "Attivati",
+    "disabled": "Disattivati"
+}
