@@ -2,9 +2,9 @@
 Simple Dispatch made using ox_lib
 
 ## Dependencies & Start Order
-ensure `ox_lib`
-ensure `qbx_core`
-ensure `melons_dispatch`
+- ensure `ox_lib`
+- ensure `Framework`
+- ensure `melons_dispatch`
 
 ## Installation & Use
 1. Download the code
