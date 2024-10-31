@@ -1,4 +1,8 @@
 return {
+    WhitelistedJobs = {
+        "police",
+        "ambulance"
+    },
     Alerts = {
         ["storerobbery"] = {
             title = "24/7 Robbery",

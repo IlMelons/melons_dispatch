@@ -4,7 +4,7 @@ lua54 "yes"
 
 author "IlMelons"
 description "Simple Dispatch made with ox_lib"
-version "1.0.0 [BETA 2]"
+version "1.0.0"
 
 ox_lib "locale"
 

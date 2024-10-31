@@ -1,14 +1,20 @@
-if not lib.checkDependency("qbx_core", "1.21.0", true) then return end
+if not lib.checkDependency("es_extended", "1.10.10", true) then return end
 
 ---@diagnostic disable: duplicate-set-field
 
 SVConfig = require "config.server"
 
 server = {}
-local QBX = exports.qbx_core
 
 function server.GetOnDutyPlayers(group, search)
-    local count, ids = QBX:GetDutyCountJob(group)
+    local xPlayers = ESX.GetExtendedPlayers("job", group)
+
+    local count, ids = 0, {}
+    for i=1, #xPlayers do
+        count = count + 1
+        ids[count] = xPlayers[i].source
+    end
+
     if search == "count" then
         return count
     elseif search == "ids" then
@@ -17,8 +23,9 @@ function server.GetOnDutyPlayers(group, search)
 end
 
 function server.HasWhitelistedJob(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
     for i=1, #SVConfig.WhitelistedJobs do
-        if QBX:HasPrimaryGroup(source, SVConfig.WhitelistedJobs[i]) then
+        if xPlayer.job.name == SVConfig.WhitelistedJobs[i] then
             return true
         end
     end

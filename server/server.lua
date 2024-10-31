@@ -36,20 +36,16 @@ RegisterServerEvent("melons_dispatch:server:AlertAccepted", function(data)
 end)
 
 lib.addCommand("togglealerts", { help = "Toggle the Dispatch Alerts", restricted = false}, function(source, args, raw)
+    if not server.HasWhitelistedJob(source) then return end
     TriggerClientEvent("melons_dispatch:client:SettingsAlerts", source, "toggle")
 end)
 
 lib.addCommand("mutealerts", { help = "Mute the Dispatch Alerts", restricted = false}, function(source, args, raw)
+    if not server.HasWhitelistedJob(source) then return end
     TriggerClientEvent("melons_dispatch:client:SettingsAlerts", source, "mute")
 end)
 
 lib.addCommand("opendispatch", { help = "Opens Dispatch Menu", restricted = false}, function(source, args, raw)
+    if not server.HasWhitelistedJob(source) then return end
     TriggerClientEvent("melons_dispatch:client:OpenDispatchMenu", source)
 end)
-
----@description UNCOMMENT FOR TESTING
--- lib.addCommand("testalerts", { help = "Test Alerts", restricted = false}, function(source, args, raw)
---     DispatchAlert({ coords = vector3(0.0, 0.0, 0.0), jobs = "police"}, "storerobbery")
---     DispatchAlert({ coords = vector3(0.0, 50.0, 0.0), jobs = "police"}, "fleecarobbery")
---     DispatchAlert({ coords = vector3(0.0, -50.0, 0.0), jobs = "police"}, "pacificrobbery")
--- end)
