@@ -5,6 +5,7 @@ Simple Dispatch made using ox_lib
 - ensure `ox_lib`
 - ensure `Framework`
 - ensure `melons_dispatch`
+- ensure `(robberyscripts)`
 
 ## Installation & Use
 1. Download the code
