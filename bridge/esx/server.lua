@@ -1,5 +1,7 @@
 if not lib.checkDependency("es_extended", "1.10.10", true) then return end
 
+ESX = exports["es_extended"]:getSharedObject()
+
 ---@diagnostic disable: duplicate-set-field
 
 SVConfig = require "config.server"
