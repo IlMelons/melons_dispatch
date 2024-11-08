@@ -4,7 +4,7 @@ lua54 "yes"
 
 author "IlMelons"
 description "Simple Dispatch made with ox_lib"
-version "1.0.1"
+version "1.0.2"
 
 ox_lib "locale"
 
@@ -18,7 +18,7 @@ client_scripts {
 
 server_scripts {
     "config/server.lua",
-    "bridge/**/server.lua",
+    "bridge/server/*.lua",
     "server/server.lua",
 }
 
