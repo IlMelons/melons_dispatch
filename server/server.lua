@@ -14,12 +14,12 @@ function SendAlertToJobs(alertdata, action)
     lib.triggerClientEvent("melons_dispatch:client:DispatchAlert", players, alertdata, action)
 end
 
-function DispatchAlert(data, type)
+function DispatchAlert(coords, type)
     AlertID += 1
     local alertdata = {
         id = AlertID,
-        coords = data.coords,
-        jobs = data.jobs or "police",
+        coords = coords,
+        jobs = SVConfig.Alerts[type].jobs,
         title = SVConfig.Alerts[type].title,
         message = SVConfig.Alerts[type].message,
         code = SVConfig.Alerts[type].code,

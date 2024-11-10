@@ -14,8 +14,8 @@ Simple Dispatch made using ox_lib
 4. To trigger the alerts simply use the export with the type of alert you have setted in config
 
 ## Export & Example
-- Export `exports.melons_dispatch:DispatchAlert(data, type)`
-- Example `exports.melons_dispatch:DispatchAlert({coords = vec3(0,0,0), jobs = "police"}, "storerobbery")`
+- Export `exports.melons_dispatch:DispatchAlert(coords, type)`
+- Example `exports.melons_dispatch:DispatchAlert(vec3(0,0,0), "storerobbery")`
 
 ## Discord & Donations
 - Join my [discord](https://discord.gg/RxpNTx2YKZ) for support and more scripts
