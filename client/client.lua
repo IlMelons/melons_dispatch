@@ -134,13 +134,15 @@ function OpenDispatchMenu()
     lib.showContext("dispatch_menu")
 end
 
-RegisterNetEvent("melons_dispatch:client:OpenDispatchMenu", function()
-    OpenDispatchMenu()
-end)
+RegisterNetEvent("melons_dispatch:client:OpenDispatchMenu", OpenDispatchMenu)
 
 OpenDispatchMenu = lib.addKeybind({
-    name = 'OpenDispatchMenu',
-    description = 'Open Dispatch Menu',
+    name = "OpenDispatchMenu",
+    description = "Open Dispatch Menu",
     defaultKey = "F10",
-    onPressed = OpenDispatchMenu,
+    onPressed = function()
+        if lib.callback.await("melons_dispatch:server:HasWhitelistedJob", false) then
+            TriggerEvent("melons_dispatch:client:OpenDispatchMenu")
+        end
+    end,
 })
