@@ -35,6 +35,10 @@ RegisterServerEvent("melons_dispatch:server:AlertAccepted", function(data)
     SendAlertToJobs(data, "remove")
 end)
 
+lib.callback.register("melons_dispatch:server:HasWhitelistedJob", function(source)
+    return server.HasWhitelistedJob(source)
+end)
+
 lib.addCommand("togglealerts", { help = "Toggle the Dispatch Alerts", restricted = false}, function(source, args, raw)
     if not server.HasWhitelistedJob(source) then return end
     TriggerClientEvent("melons_dispatch:client:SettingsAlerts", source, "toggle")
