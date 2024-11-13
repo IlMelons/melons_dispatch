@@ -12,7 +12,7 @@ function server.GetOnDutyPlayers(group, search)
     local Players = QBCore.Functions.GetQBPlayers()
     for _, player in pairs(Players) do
         if player.PlayerData.job.name == group and player.PlayerData.job.onduty then
-            count = count + 1
+            count += 1
             ids[count] = player.PlayerData.source
         end
     end
