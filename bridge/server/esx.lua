@@ -11,7 +11,7 @@ function server.GetOnDutyPlayers(group, search)
     local xPlayers = ESX.GetExtendedPlayers("job", group)
     local count, ids = 0, {}
     for i=1, #xPlayers do
-        count = count + 1
+        count += 1
         ids[count] = xPlayers[i].source
     end
 
