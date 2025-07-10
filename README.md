@@ -1,25 +1,6 @@
-# Melons Dispatch
-Simple Dispatch made using ox_lib
+## MOVED TO ORGANIZATION ACCOUNT
+RESOURCE DEACTIVATED AND MOVED TO ORGANIZATION ACCOUNT
 
-## Dependencies & Start Order
-- ensure `ox_lib`
-- ensure `Framework`
-- ensure `melons_dispatch`
-- ensure `(robberyscripts)`
-
-## Installation & Use
-1. Download the code
-2. Extract the .zip file and rename the folder `melons_dispatch`
-3. To setup the alerts, open `server.lua` in config folder
-4. To trigger the alerts simply use the export with the type of alert you have setted in config
-
-## Export & Example
-- Export `exports.melons_dispatch:DispatchAlert(coords, type)`
-- Example `exports.melons_dispatch:DispatchAlert(vec3(0,0,0), "storerobbery")`
-
-## Discord & Donations
-- Join my [discord](https://discord.gg/RxpNTx2YKZ) for support and more scripts
-- Donate in my [ko-fi](https://ko-fi.com/ilmelons) if you want to support my projects
-
-## Preview
-[Melons Dispatch](https://youtu.be/co-Icg-CjHk)
+- For updates go to this: https://github.com/Monarch-Development/mnr_dispatch
+- New Documentation: https://monarch-docs.ricodev.it/docs/monarch-resources/mnr_dispatch
+- Discord for Support: https://discord.com/invite/WKtk65yBC6
